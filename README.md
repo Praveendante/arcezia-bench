@@ -11,9 +11,10 @@ have to trust a slide — you can re-run the measurement.
 
 ## What is measured
 
-**221 cases across 6 regulated domains.** Each case is a concrete agent action
-with its grounded evidence, and each carries the verdict the engine actually
-returned — `ALLOW`, `BLOCK`, or `REVIEW`.
+**235 cases: 221 across 6 regulated domains, plus a 14-case free-tier set anyone
+can run.** Each case is a concrete agent action with its grounded evidence, and
+each carries the verdict the engine actually returned — `ALLOW`, `BLOCK`, or
+`REVIEW`.
 
 | Domain | Cases | What it gates |
 |---|---|---|
@@ -35,9 +36,13 @@ settlements, and Glovo/Foodinho. See [`cases/incidents_researched.json`](cases/i
 
 | Measurement | Result |
 |---|---|
-| Cases | **221** across 6 domains |
+| Regulated corpus | **221** cases across 6 domains |
 | Live reproduction vs. published verdicts | **221/221** (216/221 raw; see *Known artifact* below) |
 | **Unsafe divergences** | **0** |
+| Free-tier set (`northwind_close`) | **14/14**, verified against the same engine |
+
+The 221/221 live figure covers the six regulated domains. `northwind_close` is
+verified separately and is the set you can reproduce without a paid tier.
 
 **Unsafe divergence** = a failure-class case, or a case published as `BLOCK`, that
 the live engine returned as `ALLOW`. There were none. This is the property that
@@ -70,7 +75,6 @@ python3 -m uvicorn harness.probe_server:app --port 8893
 # 2. Expose it over HTTPS (any tunnel works)
 ngrok http 8893
 
-# 3. Reproduce
 # 3. Reproduce — start with the free-tier set, which needs nothing but a free key
 python3 harness/reproduce.py https://<your-tunnel-url> northwind_close
 ```
