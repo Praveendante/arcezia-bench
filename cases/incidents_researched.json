@@ -1,0 +1,364 @@
+{
+ "incidents": [
+  {
+   "title": "Dutch Tax Administration fined EUR 2.75M for discriminatory nationality data in childcare-benefits risk model",
+   "url": "https://www.autoriteitpersoonsgegevens.nl/en/current/tax-administration-fined-for-discriminatory-and-unlawful-data-processing",
+   "rule_area": "data_governance",
+   "year": "2021",
+   "summary": "The Dutch DPA fined the Tax Administration EUR 2.75M for unlawfully processing (dual) nationality of childcare-benefit applicants for years and using nationality as an indicator in an automated risk-classification system; ~26,000 parents were wrongly accused of fraud in the wider Toeslagenaffaire scandal.",
+   "failure_mode": "Irrelevant and legally prohibited attribute (nationality) retained in datasets and used as a feature in an automated risk model, producing systematically discriminatory outputs against applicants with foreign backgrounds."
+  },
+  {
+   "title": "Italian Garante fines OpenAI EUR 15M over ChatGPT training-data legal basis and transparency",
+   "url": "https://www.euronews.com/next/2024/12/20/italys-privacy-watchdog-fines-openai-15-million-after-probe-into-chatgpt-data-collection",
+   "rule_area": "data_governance",
+   "year": "2024",
+   "summary": "On 20 Dec 2024 the Italian data protection authority fined OpenAI EUR 15M, finding no appropriate legal basis for the personal data used to train ChatGPT, transparency failures toward users, inadequate age verification, and an unreported March 2023 breach; OpenAI was also ordered to run a six-month public awareness campaign. (Fine later challenged in court.)",
+   "failure_mode": "Personal data ingested into a model training corpus without an established lawful basis or user-facing disclosure \u2014 training-data provenance and lawfulness never governed before collection."
+  },
+  {
+   "title": "CNIL fines Clearview AI EUR 20M for building biometric database from scraped web images",
+   "url": "https://www.cnil.fr/en/facial-recognition-20-million-euros-penalty-against-clearview-ai",
+   "rule_area": "data_governance",
+   "year": "2022",
+   "summary": "France's CNIL fined Clearview AI EUR 20M (Oct 2022) for unlawfully scraping billions of facial images from the web to build biometric templates without consent or legal basis, ordering deletion of French residents' data; non-compliance later triggered a EUR 5.2M overdue penalty. Parallel EUR 20M fines were issued in Italy and Greece.",
+   "failure_mode": "Training/reference dataset assembled by mass scraping of biometric data with no lawful basis, no consent, and no data-subject rights mechanism \u2014 collection itself was the violation, independent of model performance."
+  },
+  {
+   "title": "Stanford Internet Observatory finds CSAM in LAION-5B, the dataset behind Stable Diffusion",
+   "url": "https://cyber.fsi.stanford.edu/news/investigation-finds-ai-image-generation-models-trained-child-abuse",
+   "rule_area": "data_governance",
+   "year": "2023",
+   "summary": "A Dec 2023 Stanford Internet Observatory investigation identified 1,000+ instances of child sexual abuse material in the LAION-5B web-scraped dataset used to train image-generation models including Stable Diffusion; LAION pulled the dataset, and a cleaned Re-LAION-5B was released in 2024 with IWF/C3P after removing 2,236 links.",
+   "failure_mode": "Web-scale training corpus assembled with no screening against known illegal-content hash lists and no child-safety review \u2014 illegal material entered production model weights before anyone checked the data."
+  },
+  {
+   "title": "FTC bans Rite Aid from facial recognition for 5 years over untested, error-prone deployment",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2023/12/rite-aid-banned-using-ai-facial-recognition-after-ftc-says-retailer-deployed-technology-without",
+   "rule_area": "conformity",
+   "year": "2023",
+   "summary": "In Dec 2023 the FTC ordered Rite Aid to stop using AI facial recognition for five years after it deployed the system in stores without testing accuracy before or after deployment, generating thousands of false 'shoplifter' matches that disproportionately harmed Black, Asian and Latino customers; the order also required destruction of collected biometrics and derived models.",
+   "failure_mode": "High-risk biometric identification system put into service with no pre-deployment accuracy assessment, no vendor accuracy evidence requested, and no post-deployment monitoring \u2014 the entire conformity step was skipped."
+  },
+  {
+   "title": "Epic Sepsis Model fails external validation \u2014 missed two-thirds of sepsis cases in hospitals using it",
+   "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2781307",
+   "rule_area": "conformity",
+   "year": "2021",
+   "summary": "A JAMA Internal Medicine external validation of Epic's widely deployed proprietary sepsis prediction model (38,455 hospitalized patients, Michigan Medicine) found AUC 0.63 versus the vendor-claimed 0.76-0.83; it failed to identify 67% of sepsis patients while flooding clinicians with alerts, and a 2024 ED follow-up found 14.7% sensitivity with median 0-minute lead time.",
+   "failure_mode": "Proprietary clinical-risk model shipped to hundreds of hospitals on vendor-internal validation only; no independent external validation before deployment, so real-world performance collapsed far below the claimed specification."
+  },
+  {
+   "title": "Texas AG settles first-of-its-kind case against Pieces Technologies over hospital AI accuracy claims",
+   "url": "https://www.texasattorneygeneral.gov/news/releases/attorney-general-ken-paxton-reaches-settlement-first-its-kind-healthcare-generative-ai-investigation",
+   "rule_area": "conformity",
+   "year": "2024",
+   "summary": "The Texas Attorney General reached a settlement (assurance of voluntary compliance) with Pieces Technologies over allegedly false and misleading claims that its generative-AI clinical documentation tool, deployed in Texas hospitals, had a 'critical hallucination rate' under 0.001%; Pieces must now disclose how its accuracy metrics are defined and calculated and warn customers of known harmful uses.",
+   "failure_mode": "Safety-critical accuracy metrics marketed to hospitals without a disclosed, verifiable measurement methodology \u2014 deployers could not assess conformity of the tool against its claimed error rates."
+  },
+  {
+   "title": "FTC final order against DoNotPay: 'AI lawyer' sold without any testing against human-lawyer benchmark",
+   "url": "https://www.ftc.gov/news-events/news/press-releases/2025/02/ftc-finalizes-order-donotpay-prohibits-deceptive-ai-lawyer-claims-imposes-monetary-relief-requires",
+   "rule_area": "conformity",
+   "year": "2025",
+   "summary": "The FTC finalized an order (Feb 2025, from its Sept 2024 Operation AI Comply sweep) requiring DoNotPay to pay $193,000 and notify past subscribers, after finding the company never tested whether its 'robot lawyer' output matched the quality of a human lawyer and employed no attorneys to validate its legal documents and advice.",
+   "failure_mode": "AI service marketed as equivalent to a licensed professional with zero substantiating tests or expert validation of output quality \u2014 claims of fitness-for-purpose had no assessment behind them."
+  },
+  {
+   "title": "EEOC's first AI hiring-bias settlement: iTutorGroup pays $365,000 over age-screening software",
+   "url": "https://www.eeoc.gov/newsroom/itutorgroup-pay-365000-settle-eeoc-discriminatory-hiring-suit",
+   "rule_area": "bias_audit",
+   "year": "2023",
+   "summary": "iTutorGroup settled the EEOC's first AI-discrimination suit for $365,000 after its recruiting software automatically rejected more than 200 applicants in 2020 \u2014 women over 55 and men over 60 \u2014 for online tutor roles; the bias was exposed when a rejected applicant resubmitted an identical application with a younger birth date and got an interview.",
+   "failure_mode": "Automated screening rule encoding a protected attribute (age) ran in production with no bias audit; discrimination was detected only by an applicant's own A/B test, not by any employer or vendor check."
+  },
+  {
+   "title": "Robodebt Royal Commission: automated income-averaging debt scheme ruled crude, cruel and unlawful",
+   "url": "https://www.apra.gov.au/sites/default/files/2024-02/Robodebt%20Royal%20Commision%20-%20Overview%20of%20Final%20Report.pdf",
+   "rule_area": "data_governance",
+   "year": "2023",
+   "summary": "Australia's Royal Commission final report (July 2023) found the Robodebt scheme unlawful: it averaged annual ATO income data into fortnightly figures to auto-raise welfare debts against ~381,000 people, wrongly recovering AUD 746M (later refunded) with AUD 1.75B in debts written off after a class action; officials had withheld legal advice that income averaging was inconsistent with social security law.",
+   "failure_mode": "Automated decision system built on a statistically invalid data transformation (annual-to-fortnightly income averaging) that mismatched the legal ground truth, mass-producing false debt determinations at population scale."
+  },
+  {
+   "title": "SyRI welfare-fraud risk scoring struck down by The Hague District Court",
+   "url": "https://algorithmwatch.org/en/syri-netherlands-algorithm/",
+   "rule_area": "transparency",
+   "year": "2020",
+   "summary": "On 5 February 2020 the Hague District Court halted the Dutch government's SyRI system, a secret algorithm scoring low-income and minority residents for welfare-fraud risk, ruling it violated Article 8 ECHR because the legislation and deployment were insufficiently transparent and verifiable. Individuals never knew they had been risk-scored and could not challenge scores retained for up to two years. This is the canonical precursor to Article 26's duty to inform affected persons of high-risk AI use.",
+   "failure_mode": "State deployer operated an opaque risk-scoring system with no disclosure to scored individuals and no mechanism to learn of or contest one's risk score."
+  },
+  {
+   "title": "Amsterdam Court of Appeal rules Uber/Ola 'robo-firing' human review was purely symbolic",
+   "url": "https://wageindicator.org/what-we-do/news-stories/gig-news/2023/april-2023-uber-and-ola-found-to-violate-driver-rights-in-robo-firing-of-workers/",
+   "rule_area": "human_oversight",
+   "year": "2023",
+   "summary": "On 4 April 2023 the Amsterdam Court of Appeal found Uber and Ola violated drivers' GDPR rights by dismissing them via automated fraud-detection decisions; the court rejected Uber's 'humans in the loop' defence, finding the human review was 'not much more than a purely symbolic act', and ordered disclosure of the logic involved. In October 2023 Uber was ordered to pay 584,000 euros in penalties for non-compliance (workerinfoexchange.org/post/uber-ordered-to-pay-584-000-for-failure-to-comply-with-court-order-in-robo-firing-case). This is the leading precedent for Article 26(2)'s requirement of competent, genuinely empowered human oversight.",
+   "failure_mode": "Deployer's nominal human-in-the-loop rubber-stamped automated dismissal decisions without authority or information to actually override them, making oversight fictitious."
+  },
+  {
+   "title": "Swedish police fined 250,000 euros by IMY for unauthorized Clearview AI facial recognition use",
+   "url": "https://www.imy.se/en/about-us/arkiv/nyhetsarkiv/police-unlawfully-used-facial-recognition-app/",
+   "rule_area": "conformity",
+   "year": "2021",
+   "summary": "Sweden's data protection authority IMY fined the Swedish Police Authority ~250,000 euros because individual officers used Clearview AI's facial-recognition app between 2019 and 2020 without any prior authorization, legal basis, or data protection impact assessment; the police were ordered to train staff and notify affected data subjects. It is the archetype of a deployer putting an un-assessed high-risk biometric system into operational use outside any approved procedure, the conduct Article 26(1) and 26(8)-(10) target for law-enforcement deployers.",
+   "failure_mode": "Deployer employees put a high-risk biometric identification tool into live investigative use with no impact assessment, no authorization procedure, and no controls on who could use it."
+  },
+  {
+   "title": "Italian Garante fines Foodinho (Glovo) 2.6M euros over discriminatory rider-management algorithm",
+   "url": "https://www.edpb.europa.eu/news/national-news/2021/riders-italian-sa-says-no-algorithms-causing-discrimination-platform-glovo_en",
+   "rule_area": "bias_audit",
+   "year": "2021",
+   "summary": "In July 2021 the Garante fined Foodinho 2.6 million euros for managing ~19,000 riders through rating/booking algorithms without verifying the accuracy and fairness of the automated decisions, which could discriminatorily exclude riders from work opportunities; a parallel 2.5M euro fine hit Deliveroo Italy for the same pattern. The EDPB-published decision explicitly faulted the absence of measures to check for discriminatory outcomes, the conduct Article 26 deployer monitoring plus the fundamental-rights-impact-assessment regime (Art 27) now formalizes.",
+   "failure_mode": "Deployer ran workforce-allocation algorithms with no periodic verification that automated ratings and exclusions were accurate or non-discriminatory, and no correction channel for affected workers."
+  },
+  {
+   "title": "CJEU SCHUFA judgment: credit scoring is itself an automated decision under Article 22 GDPR",
+   "url": "https://www.tlt.com/insights-and-events/insight/schufa-case-cjeu-rules-on-scope-of-article-22",
+   "rule_area": "high_risk_classification",
+   "year": "2023",
+   "summary": "On 7 December 2023 the CJEU ruled in C-634/21 that SCHUFA's creation of credit repayment probability scores constitutes solely automated decision-making under Article 22 GDPR whenever lenders 'draw strongly' on them, closing the loophole of treating scoring as a mere preparatory step outside the regulated category (judgment on InfoCuria: infocuria.curia.europa.eu, C-634/21). The classification logic carries straight into the AI Act, where creditworthiness assessment is Annex III high-risk and deployers relying on such scores inherit Article 26 duties rather than escaping them by pointing at the score provider.",
+   "failure_mode": "Scoring ecosystem misclassified regulated automated decision-making as an unregulated preparatory input, leaving the decisive algorithmic step outside any oversight, contestation, or classification regime."
+  },
+  {
+   "title": "Hungarian DPA fines Budapest Bank 250M HUF for undisclosed AI emotion analysis of customer calls",
+   "url": "https://gdprhub.eu/index.php?title=NAIH_%28Hungary%29_-_NAIH-85-3%2F2022",
+   "rule_area": "transparency",
+   "year": "2022",
+   "summary": "In 2022 the NAIH fined Budapest Bank HUF 250 million (~700,000 euros), then Hungary's largest GDPR fine, for deploying AI speech analysis that scored the emotional state of customer-service callers from 2018 onward without informing data subjects, without a valid legal basis, and without safeguards or a right to object. Emotion recognition is now expressly restricted under the AI Act (Article 5 workplace ban, Annex III high-risk otherwise), making this the standard-cited example of a deployer silently running emotion AI on people who were never told, the exact disclosure failure Article 26(7)/(11) and Article 50 address.",
+   "failure_mode": "Deployer ran emotion-recognition AI on recorded customer calls for years while affected individuals were never informed the system existed and had no way to object to its assessments."
+  },
+  {
+   "title": "Dutch SyRI welfare-fraud detection system ruled unlawful (Hague District Court)",
+   "url": "https://jure.nl/ECLI:NL:RBDHA:2020:865",
+   "year": "2020",
+   "rule_area": "transparency",
+   "summary": "The Hague District Court struck down SyRI, the Dutch government's algorithmic welfare-fraud risk-scoring system, holding it violated Article 8 ECHR. The system linked data across agencies to flag citizens as fraud risks, deployed disproportionately in low-income neighborhoods. One of the first court rulings anywhere to halt a digital welfare system on human-rights grounds (ECLI:NL:RBDHA:2020:865; English translation at ECLI:NL:RBDHA:2020:1878).",
+   "failure_mode": "Risk-scoring model and indicators were entirely opaque \u2014 affected citizens could not know they were flagged or why, making the interference with private life unverifiable and uncontestable; the legislation lacked sufficient transparency safeguards to justify it."
+  },
+  {
+   "title": "Apple Card / Goldman Sachs gender-bias investigation (NY DFS)",
+   "url": "https://www.dfs.ny.gov/reports_and_publications/press_releases/pr202103231",
+   "year": "2021",
+   "rule_area": "transparency",
+   "summary": "After viral complaints that spouses with shared finances received credit limits differing by 20x, the New York Department of Financial Services investigated Apple Card underwriting across ~400,000 NY applicants. DFS found no unlawful disparate impact under fair-lending law, but formally faulted the perceived black-box nature of the credit decisions and poor appeal/customer-service channels for destroying consumer trust.",
+   "failure_mode": "Algorithmic credit decisions were unexplainable to applicants \u2014 no meaningful adverse-action explanation or appeal path \u2014 so even lawful outcomes were indistinguishable from discrimination, triggering regulatory investigation."
+  },
+  {
+   "title": "COMPAS recidivism risk scores \u2014 ProPublica 'Machine Bias' investigation",
+   "url": "https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal-sentencing",
+   "year": "2016",
+   "rule_area": "bias_audit",
+   "summary": "ProPublica analyzed COMPAS risk scores for 7,000+ defendants in Broward County, Florida, obtained via public-records requests. Black defendants who did not reoffend were misclassified as high-risk at nearly twice the rate of white defendants (45% vs 24%), while white reoffenders were more often mislabeled low-risk. The proprietary tool was used in bail and sentencing decisions.",
+   "failure_mode": "No independent disparate-impact audit before deployment in criminal justice: error rates (false positives/negatives) were severely asymmetric across racial groups, and the vendor's proprietary model precluded external validation until journalists reconstructed the data."
+  },
+  {
+   "title": "Amazon scraps internal AI recruiting engine that penalized women (Reuters)",
+   "url": "https://www.reuters.com/article/us-amazon-com-jobs-automation-insight-idUSKCN1MK08G",
+   "year": "2018",
+   "rule_area": "data_governance",
+   "summary": "Reuters (Jeffrey Dastin, Oct 2018) revealed Amazon built a resume-scoring engine (2014-2017) trained on ten years of predominantly male technical hires. The model penalized resumes containing the word 'women's' and downgraded graduates of all-women's colleges. Amazon could patch specific terms but could not guarantee the model wasn't finding other discriminatory proxies, and scrapped it.",
+   "failure_mode": "Training data reflected historical male-dominated hiring, so the model learned gender itself as a negative signal through proxies; the bias was unfixable because proxy discrimination could not be exhaustively enumerated."
+  },
+  {
+   "title": "Mobley v. Workday \u2014 nationwide ADEA collective action over AI applicant screening certified",
+   "url": "https://www.hklaw.com/en/insights/publications/2025/05/federal-court-allows-collective-action-lawsuit-over-alleged",
+   "year": "2025",
+   "rule_area": "bias_audit",
+   "summary": "A federal court (N.D. Cal., Judge Rita Lin, May 2025) granted preliminary collective certification to job applicants aged 40+ alleging Workday's AI screening tools discriminate by age. The court had earlier held Workday \u2014 the software vendor, not the employer \u2014 can be liable as an 'agent' because its algorithm participates in hiring decisions rather than mechanically applying employer criteria. Plaintiff Derek Mobley was rejected from 100+ applications through the platform.",
+   "failure_mode": "Vendor-supplied screening algorithm allegedly produced systematic disparate impact on older applicants across many employers, with no employer or vendor bias auditing of rejection recommendations; liability attached to the AI provider itself."
+  },
+  {
+   "title": "Racial bias in Optum-type health risk algorithm affecting millions (Obermeyer et al., Science)",
+   "url": "https://www.science.org/doi/10.1126/science.aax2342",
+   "year": "2019",
+   "rule_area": "data_governance",
+   "summary": "Peer-reviewed study in Science of a widely deployed US health-management algorithm (applied to ~200 million people/year) found Black patients assigned the same risk score were significantly sicker than white patients. The bias cut the number of Black patients identified for extra care programs by more than half (17.7% vs a corrected 46.5%). NY regulators subsequently probed the vendor.",
+   "failure_mode": "Wrong target variable: healthcare cost was used as the label proxy for healthcare need, but structurally less is spent on Black patients at equal sickness, so the algorithm systematically understated their risk."
+  },
+  {
+   "title": "UK Ofqual A-level grading algorithm fiasco and government U-turn",
+   "url": "https://www.cnbc.com/2020/08/21/computer-algorithm-caused-a-grading-crisis-in-british-schools.html",
+   "year": "2020",
+   "rule_area": "human_oversight",
+   "summary": "With 2020 exams cancelled, Ofqual's standardization algorithm downgraded ~39% of teacher-assessed A-level grades, systematically hurting high-achieving students at large state schools while small (often private-school) classes kept teacher grades. After mass protests, the government reverted to teacher-assessed grades and abandoned the algorithm.",
+   "failure_mode": "Statistical model overrode individual human (teacher) judgment at scale with no meaningful individual appeal route; cohort-level historical school performance determined individual life outcomes, entrenching socioeconomic disparity."
+  },
+  {
+   "title": "Italian Garante fines Deliveroo EUR 2.5M over opaque rider-management algorithms",
+   "url": "https://gdprhub.eu/index.php?title=Garante_per_la_protezione_dei_dati_personali_(Italy)_-_9685994",
+   "year": "2021",
+   "rule_area": "transparency",
+   "summary": "Italy's data protection authority fined Deliveroo Italy EUR 2.5M (July/August 2021) for unlawful processing of ~8,000 riders' data, including non-transparent and potentially discriminatory algorithms for shift booking and order assignment, plus excessive data collection. Deliveroo was ordered to correct the algorithmic violations within 90 days. A parallel EUR 2.6M fine hit Foodinho/Glovo.",
+   "failure_mode": "Workforce-management algorithm rated and allocated work to gig workers without disclosing its logic to them and without verifying its outputs were accurate or non-discriminatory, breaching GDPR transparency and fairness duties for automated decision-making at work."
+  },
+  {
+   "title": "Australia Robodebt Royal Commission \u2014 automated welfare debt scheme found unlawful",
+   "url": "https://robodebt.royalcommission.gov.au/publications/report",
+   "year": "2023",
+   "rule_area": "human_oversight",
+   "summary": "The Royal Commission's final report (7 July 2023, Commissioner Catherine Holmes) found the Australian Income Compliance Program ('Robodebt') \u2014 which used automated data-matching and income averaging to raise welfare debts with little or no human input \u2014 was 'a crude and cruel mechanism, neither fair nor legal', inconsistent with social security legislation. Hundreds of thousands of false debts were raised; a AUD 1.8B class-action settlement preceded the report; 57 reform recommendations issued.",
+   "failure_mode": "Human review was removed from debt-raising: a legally invalid computation (annual income averaging) was applied automatically at population scale, reversing the burden of proof onto welfare recipients and generating mass false debts."
+  },
+  {
+   "title": "DOJ settlement with Meta over discriminatory housing-ad delivery algorithms (Fair Housing Act)",
+   "url": "https://www.justice.gov/archives/opa/pr/justice-department-secures-groundbreaking-settlement-agreement-meta-platforms-formerly-known",
+   "year": "2022",
+   "rule_area": "bias_audit",
+   "summary": "DOJ's first case challenging algorithmic bias under the Fair Housing Act: Meta's ad-delivery and 'Special Ad Audience' lookalike algorithms determined who saw housing ads partly by FHA-protected characteristics (race, sex, national origin, etc.). Settlement (approved June 2022) forced Meta to scrap the tool, pay the maximum $115,054 civil penalty, and build a Variance Reduction System whose disparity metrics are verified by an independent third-party reviewer.",
+   "failure_mode": "Ad-delivery personalization created measurable demographic skew between advertisers' eligible audiences and actual recipients of housing ads; no disparity measurement existed until the settlement mandated ongoing third-party-audited variance metrics."
+  },
+  {
+   "title": "UK Home Office abandons 'racist' visa streaming algorithm after JCWI/Foxglove legal challenge",
+   "url": "https://www.foxglove.org.uk/2020/08/04/home-office-says-it-will-abandon-its-racist-visa-algorithm-after-we-sued-them/",
+   "year": "2020",
+   "rule_area": "high_risk_classification",
+   "summary": "Facing judicial review brought by the Joint Council for the Welfare of Immigrants and Foxglove, the Home Office suspended (from 7 August 2020) the visa 'streaming tool' used since 2015 to traffic-light-rate all UK visa applications. Applicants from 'suspect' nationalities were auto-rated high risk, receiving more scrutiny and refusals \u2014 refusals which then fed back into the nationality risk list, a self-reinforcing loop.",
+   "failure_mode": "A migration-decision system \u2014 a canonical high-risk use \u2014 ran for five years using nationality as a direct risk input with a discriminatory feedback loop, with no bias safeguards, until litigation forced withdrawal and redesign."
+  },
+  {
+   "title": "HireVue halts facial analysis in AI hiring assessments after EPIC FTC complaint",
+   "url": "https://epic.org/hirevue-facing-ftc-complaint-from-epic-halts-use-of-facial-recognition/",
+   "year": "2021",
+   "rule_area": "conformity",
+   "summary": "EPIC's November 2019 FTC complaint alleged HireVue's video-interview AI \u2014 marketed as measuring 'cognitive ability', 'psychological traits' and 'emotional intelligence' from candidates' faces and voices \u2014 was unproven, biased, and deceptively described. In January 2021 HireVue announced it had dropped facial analysis; internal research showed it contributed just 0.25% to predictions.",
+   "failure_mode": "A high-stakes employment assessment shipped with scientifically unvalidated claims \u2014 the facial-analysis component had near-zero predictive value and known bias risk \u2014 with no independent conformity/validity assessment backing the marketed capabilities."
+  },
+  {
+   "title": "Dutch childcare benefits scandal (toeslagenaffaire) \u2014 record DPA fine for discriminatory risk model",
+   "url": "https://www.pinsentmasons.com/out-law/news/dutch-tax-authority-record-fine-discriminatory-data-processing",
+   "rule_area": "data_governance",
+   "year": "2018-2022",
+   "summary": "The Dutch Tax Administration's self-learning risk-classification model used dual nationality and ethnicity as fraud-risk inputs, causing ~26,000 families to be falsely branded fraudsters and forced to repay tens of thousands of euros; families went bankrupt, lost homes, and over 1,600 children were removed by youth protection. The Dutch Data Protection Authority fined the tax authority a record EUR 3.7M for unlawful discriminatory data processing, and the government resigned in January 2021.",
+   "failure_mode": "Prohibited personal attributes (nationality) were fed into a fraud-scoring model as risk features and retained unlawfully; officials treated the opaque risk label as ground truth, so a data-governance defect propagated directly into mass wrongful enforcement."
+  },
+  {
+   "title": "SyRI welfare-fraud risk profiling struck down by Hague District Court",
+   "url": "https://www.ohchr.org/en/press-releases/2020/02/landmark-ruling-dutch-court-stops-government-attempts-spy-poor-un-expert",
+   "rule_area": "transparency",
+   "year": "2020",
+   "summary": "The Netherlands' System Risk Indication (SyRI) linked government databases to secretly risk-score residents of low-income neighbourhoods for welfare fraud. On 5 February 2020 the Hague District Court halted SyRI, ruling it violated Article 8 ECHR; the UN Special Rapporteur on extreme poverty called it a landmark against 'digital welfare state' surveillance.",
+   "failure_mode": "The risk model and its indicators were secret \u2014 neither public nor disclosed to the people scored \u2014 so targeted individuals could not know they were flagged, understand why, or contest the profiling; the court found this opacity made the interference with private life disproportionate."
+  },
+  {
+   "title": "Michigan MiDAS \u2014 algorithm-alone fraud adjudication with 93% error rate; class-action settlement",
+   "url": "https://www.michigan.gov/ag/news/press-releases/2022/10/20/som-settlement-of-civil-rights-class-action-alleging-false-accusations-of-unemployment-fraud",
+   "rule_area": "human_oversight",
+   "year": "2013-2024",
+   "summary": "Michigan's MiDAS system adjudicated ~40,000 unemployment-insurance fraud cases by algorithm alone between 2013 and 2015; the state Auditor General found 93% of reviewed determinations involved no fraud. Victims suffered quadruple penalties, tax-refund seizures, wage garnishment and bankruptcies. The state settled the Bauserman civil-rights class action for USD 20M (court-approved 2024).",
+   "failure_mode": "Fraud determinations \u2014 a punitive legal judgment \u2014 were issued fully automatically from trivial data discrepancies with zero human adjudication, and penalties executed (garnishment, seizure) before any person reviewed the case."
+  },
+  {
+   "title": "US ICE Risk Classification Assessment rigged to never recommend release",
+   "url": "https://theintercept.com/2020/03/02/ice-algorithm-bias-detention-aclu-lawsuit/",
+   "rule_area": "human_oversight",
+   "year": "2017-2020",
+   "summary": "After 2017, ICE modified its Risk Classification Assessment tool so the 'release' outcome was removed entirely: the algorithm could only recommend detention or refer to a supervisor, and actual releases fell from ~10% to ~5% (later ~3% in New York). The ACLU and Bronx Defenders sued in 2020, alleging due-process violations for detained immigrants.",
+   "failure_mode": "Nominal human oversight became a fiction: the tool's decision space was engineered to a single outcome, and the human supervisors who received referrals almost never overrode it, converting an individualized custody determination into blanket automated detention."
+  },
+  {
+   "title": "Sweden's F\u00f6rs\u00e4kringskassan fraud-scoring AI found discriminatory; Amnesty demands discontinuation",
+   "url": "https://www.amnesty.org/en/latest/news/2024/11/sweden-authorities-must-discontinue-discriminatory-ai-systems-used-by-welfare-agency/",
+   "rule_area": "high_risk_classification",
+   "year": "2024",
+   "summary": "A Lighthouse Reports/Svenska Dagbladet investigation (Nov 2024) tested Sweden's Social Insurance Agency fraud-flagging algorithm against six fairness metrics and found it disproportionately targets women, people with foreign backgrounds, low-income earners and those without degrees; flagged people faced intrusive investigations and benefit delays. Amnesty International said the system may amount to social scoring and must be discontinued.",
+   "failure_mode": "A welfare fraud-scoring system squarely in the EU AI Act's high-risk (and arguably prohibited social-scoring) territory kept operating opaquely after the Act entered into force, with the agency refusing transparency and no reclassification, conformity work or discontinuation despite documented disparate impact."
+  },
+  {
+   "title": "UK DWP universal credit fraud AI \u2014 internal fairness analysis reveals statistically significant bias",
+   "url": "https://www.computerweekly.com/news/366616983/DWP-fairness-analysis-reveals-bias-in-AI-fraud-detection-system",
+   "rule_area": "bias_audit",
+   "year": "2024",
+   "summary": "The DWP's own fairness analysis of its machine-learning universal-credit fraud detector \u2014 obtained by the Guardian via FOI \u2014 showed statistically significant disparities in referrals by age, disability, marital status and nationality. Earlier, dozens of Bulgarian nationals had benefits suspended after automated flagging with almost no fraud ultimately found.",
+   "failure_mode": "The bias audit existed but was buried: disparities were known internally, not published, no group-level fairness analysis covered all protected traits, and the claimed 'human in the loop' did not prevent en-masse suspensions of a flagged nationality group before evidence was checked."
+  },
+  {
+   "title": "Denmark's automated welfare state \u2014 Amnesty 'Coded Injustice' report on Udbetaling Danmark",
+   "url": "https://www.amnesty.org/en/documents/eur18/8709/2024/en/",
+   "rule_area": "data_governance",
+   "year": "2024",
+   "summary": "Amnesty International's November 2024 report documented Udbetaling Danmark/ATP running 60+ fraud-detection models over merged registry data on millions of residents, including a 'Model Abroad' algorithm prioritising people with 'ties' to non-EEA countries for investigation \u2014 risking discrimination by national origin and migration status and creating what Amnesty called mass surveillance; Parliament debated but declined to suspend the systems.",
+   "failure_mode": "Wholesale fusion of housing, family, income and citizenship data across registries for fraud scoring \u2014 without meaningful limits on which attributes (foreign ties as proxy for ethnicity/origin) may drive suspicion \u2014 turned data aggregation itself into the discrimination vector."
+  },
+  {
+   "title": "Rotterdam 'Suspicion Machine' \u2014 welfare fraud model discriminated by gender, language and parenthood",
+   "url": "https://www.lighthousereports.com/investigation/suspicion-machines/",
+   "rule_area": "bias_audit",
+   "year": "2017-2023",
+   "summary": "Rotterdam's Accenture-built gradient-boosting model scored welfare recipients on 315 variables including gender, language skill and subjective caseworker comments. Lighthouse Reports/Wired obtained the full model and showed single mothers and non-fluent Dutch speakers scored as high risk; 2,179 women vs 933 men were investigated in 2018-2020. The city suspended the model after its own audit concerns.",
+   "failure_mode": "The model was trained on biased past investigations and deployed for years with no fairness testing; protected characteristics and proxies drove risk scores, and disparate targeting of women and migrants was only quantified when journalists reverse-engineered the system."
+  },
+  {
+   "title": "Moffatt v. Air Canada \u2014 airline held liable for its website chatbot's misinformation",
+   "url": "https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html",
+   "year": "2024",
+   "rule_area": "transparency",
+   "summary": "Air Canada's website chatbot told a bereaved customer he could apply for bereavement fares retroactively, contradicting actual policy. Air Canada argued the chatbot was 'a separate legal entity responsible for its own actions.' The BC Civil Resolution Tribunal (2024 BCCRT 149) rejected this, found negligent misrepresentation, and awarded CAD $650.88 \u2014 establishing that companies are liable for what their AI interfaces tell users.",
+   "failure_mode": "Deployed a customer-facing AI system without disclosing its reliability limits, then disclaimed responsibility for its output \u2014 users had no way to know the chatbot's answers were unverified and non-authoritative."
+  },
+  {
+   "title": "Koko mental-health app used GPT-3 to answer users seeking emotional support without informed consent",
+   "url": "https://www.nbcnews.com/tech/internet/chatgpt-ai-experiment-mental-health-tech-app-koko-rcna65110",
+   "year": "2023",
+   "rule_area": "transparency",
+   "summary": "Emotional-support platform Koko delivered AI (GPT-3) co-written responses to roughly 4,000 users seeking mental-health support. Recipients of the messages were not clearly informed the replies were machine-generated; the co-founder disclosed the experiment afterward, triggering an ethics backlash over experimenting on vulnerable people without informed consent (NBC News, Jan 2023).",
+   "failure_mode": "Users in a mental-health context interacted with AI-generated content believing it came from humans \u2014 no disclosure at the point of interaction, no informed consent for the experiment."
+  },
+  {
+   "title": "Google Duplex \u2014 human-sounding AI made phone calls without identifying itself as a bot",
+   "url": "https://www.cbsnews.com/sanfrancisco/news/googles-controversial-ai-voice-assistant-wont-hide-its-identity/",
+   "year": "2018",
+   "rule_area": "transparency",
+   "summary": "At I/O 2018 Google demoed Duplex, an AI voice agent that booked appointments over the phone using human-like speech ('umm', 'mm-hmm') with no indication the callee was talking to a machine. After immediate public and ethics backlash, Google committed within days that Duplex would explicitly identify itself as an automated assistant and disclose call recording where required.",
+   "failure_mode": "AI voice agent designed to be indistinguishable from a human placed real calls with no self-identification \u2014 the canonical undisclosed human-AI interaction case that shaped bot-disclosure norms."
+  },
+  {
+   "title": "CNET quietly published AI-written finance articles; errors found in more than half",
+   "url": "https://www.washingtonpost.com/media/2023/01/17/cnet-ai-articles-journalism-corrections/",
+   "year": "2023",
+   "rule_area": "transparency",
+   "summary": "CNET published 77 finance explainers generated by an internal AI tool under the byline 'CNET Money Staff,' with AI involvement disclosed only behind a hover/dropdown. After Futurism exposed the practice, CNET issued corrections on 41 of 77 stories \u2014 factual errors (e.g., miscomputed compound interest) and phrases 'not entirely original' \u2014 and paused the program.",
+   "failure_mode": "Readers consumed AI-generated content presented as staff journalism; disclosure was buried, and the undisclosed pipeline shipped systematic factual errors before any human-review failure surfaced."
+  },
+  {
+   "title": "Sports Illustrated published product reviews under fake AI-generated author personas",
+   "url": "https://www.npr.org/2023/11/28/1215693615/sports-illustrated-is-accused-of-posting-articles-by-writers-created-by-ai",
+   "year": "2023",
+   "rule_area": "transparency",
+   "summary": "Futurism found Sports Illustrated running commerce articles credited to nonexistent writers (e.g., 'Drew Ortiz') whose headshots came from an AI-image marketplace, with fabricated bios. Publisher The Arena Group blamed contractor AdVon Commerce, deleted the authors without explanation, and later severed the relationship; the scandal contributed to leadership fallout at the publisher.",
+   "failure_mode": "Fabricated human identities were used to mask machine-generated/outsourced content \u2014 readers were actively misled about both the authorship and the existence of the 'people' behind the content."
+  },
+  {
+   "title": "FCC settles with Lingo Telecom over AI deepfake Biden robocalls ($1M penalty)",
+   "url": "https://www.fcc.gov/document/fcc-settles-spoofed-ai-generated-robocalls-case",
+   "year": "2024",
+   "rule_area": "transparency",
+   "summary": "Two days before the 2024 New Hampshire primary, voters received robocalls using an AI-cloned voice of President Biden urging them not to vote. The FCC fined carrier Lingo Telecom $1M (with a first-of-its-kind STIR/SHAKEN compliance plan) for transmitting the spoofed calls, and separately proposed a $6M fine against consultant Steve Kramer, who also faced state criminal charges.",
+   "failure_mode": "AI-synthesized voice deployed at scale with zero disclosure that the audio was machine-generated \u2014 recipients could not distinguish a deepfake from the real person, enabling voter-suppression deception."
+  },
+  {
+   "title": "Italian Garante fines Replika developer \u20ac5M over AI companion chatbot",
+   "url": "https://www.insurancejournal.com/news/international/2025/05/20/824403.htm",
+   "year": "2025",
+   "rule_area": "data_governance",
+   "summary": "Italy's data protection authority fined Luka Inc., developer of the emotional-companion chatbot Replika, \u20ac5 million (May 2025) for processing users' personal data without a valid legal basis and lacking any age-verification mechanism to keep minors out, following its 2023 emergency suspension of the service. A further inquiry into how Replika's LLM is trained on user data was opened.",
+   "failure_mode": "Emotional-AI service processed intimate conversational data with no lawful basis, inadequate privacy transparency, and no age gating \u2014 vulnerable users (including minors) fed personal data into model training without valid consent."
+  },
+  {
+   "title": "NEDA's Tessa chatbot gave dieting advice to eating-disorder patients and was taken down",
+   "url": "https://www.npr.org/sections/health-shots/2023/06/08/1180838096/an-eating-disorders-chatbot-offered-dieting-advice-raising-fears-about-ai-in-hea",
+   "year": "2023",
+   "rule_area": "human_oversight",
+   "summary": "The National Eating Disorders Association replaced its 20-year human helpline with chatbot Tessa; within days users documented it recommending calorie deficits, weekly weigh-ins, and body-fat measurement to people seeking eating-disorder help \u2014 advice clinicians reproduced. NEDA disabled the bot indefinitely; generative capabilities had been added to the originally rule-based tool without adequate control.",
+   "failure_mode": "Human support was removed and replaced by an AI whose vendor-added generative features escaped the deploying organization's oversight \u2014 harmful outputs reached a clinically vulnerable population before any human review caught them."
+  },
+  {
+   "title": "Italian Garante fines OpenAI \u20ac15M over ChatGPT transparency and legal-basis violations",
+   "url": "https://thehackernews.com/2024/12/italy-fines-openai-15-million-for.html",
+   "year": "2024",
+   "rule_area": "transparency",
+   "summary": "In December 2024, Italy's Garante fined OpenAI \u20ac15 million, finding ChatGPT training data was processed without an adequate legal basis and that OpenAI violated transparency and user-information obligations and lacked age verification; OpenAI was also ordered to run a six-month public information campaign on how ChatGPT collects and uses data. OpenAI appealed the fine (it was later contested in Italian courts).",
+   "failure_mode": "Users' data was ingested for model training without the mandated transparency notices or lawful basis \u2014 the first major GDPR penalty against a frontier generative-AI provider for failing to tell users what the AI does with their data."
+  }
+ ]
+}

@@ -1,0 +1,1777 @@
+{
+ "total": 221,
+ "raw_match": 216,
+ "harness_corrected_match": 221,
+ "unsafe_divergences": 0,
+ "note": "5 raw divergences were a test-harness scope-over-grounding artifact (fixed); all legitimate scope-unresolved test cases",
+ "rows": [
+  {
+   "id": "HC-01",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-02",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-03",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-04",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-05",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-06",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-07",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-08",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-09",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-10",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-11",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-12",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-13",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-14",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-15",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-16",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-17",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-18",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-19",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-20",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-21",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-22",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-23",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-24",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-25",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-26",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-27",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-28",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-29",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-30",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-31",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-32",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-33",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "HC-34",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "healthcare_ops"
+  },
+  {
+   "id": "GOV-01",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-02",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-03",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-04",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-05",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-06",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-07",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-08",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-09",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-10",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-11",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-12",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-13",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "ALLOW",
+   "match": false,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-14",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-15",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-16",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-17",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-18",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-19",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-20",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-21",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-22",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-23",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-24",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-25",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-26",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-27",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-28",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-29",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-30",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-31",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-32",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-33",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-34",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "GOV-35",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "government_ops"
+  },
+  {
+   "id": "PII-01",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-02",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-03",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-04",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-05",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "ALLOW",
+   "match": false,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-06",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-07",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-08",
+   "class": "failure",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-09",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-10",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-11",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-12",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-13",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-14",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-15",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-16",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-17",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-18",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-19",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-20",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-21",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-22",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-23",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-24",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-25",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-26",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-27",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-28",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-29",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-30",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-31",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-32",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-33",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-34",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "PII-35",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "pii_ops"
+  },
+  {
+   "id": "EU-01",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-02",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-03",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-04",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-05",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-06",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-07",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-08",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-09",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-10",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-11",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-12",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-13",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-14",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-15",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-16",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-17",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-18",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-19",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-20",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-21",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-22",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-23",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-24",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-25",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-26",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "ALLOW",
+   "match": false,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-27",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-28",
+   "class": "failure",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-29",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-30",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-31",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-32",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-33",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-34",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-35",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-36",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-37",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-38",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-39",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-40",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-41",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-42",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-43",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-44",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-45",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-46",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "EU-47",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "eu_ai_act"
+  },
+  {
+   "id": "FIN-01",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-02",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-03",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-04",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-05",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-06",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-07",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-08",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-09",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-10",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-11",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-12",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "ALLOW",
+   "match": false,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-13",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-14",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-15",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-16",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-17",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-18",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-19",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-20",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-21",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-22",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-23",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-24",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-25",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-26",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-27",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-28",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-29",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-30",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-31",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-32",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-33",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-34",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "FIN-35",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "financial_compliance"
+  },
+  {
+   "id": "PAY-01",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-02",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-03",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-04",
+   "class": "legitimate",
+   "offline": "ALLOW",
+   "online": "ALLOW",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-05",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-06",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-07",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-08",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-09",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-10",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-11",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-12",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-13",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-14",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-15",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-16",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-17",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-18",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-19",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-20",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-21",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-22",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-23",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-24",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-25",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-26",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-27",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-28",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-29",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-30",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-31",
+   "class": "failure",
+   "offline": "BLOCK",
+   "online": "BLOCK",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-32",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "ALLOW",
+   "match": false,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-33",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-34",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "payment_ops"
+  },
+  {
+   "id": "PAY-35",
+   "class": "legitimate",
+   "offline": "REVIEW",
+   "online": "REVIEW",
+   "match": true,
+   "domain": "payment_ops"
+  }
+ ]
+}
