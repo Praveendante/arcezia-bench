@@ -81,6 +81,9 @@ python3 harness/reproduce.py https://<your-tunnel-url> northwind_close
 
 Expected: `northwind_close: 14/14 match | {'ALLOW': 11, 'BLOCK': 3} | unsafe 0`.
 
+That is not an aspiration — it is the output of running exactly these commands
+against production on 2026-08-01.
+
 That set is a month-end close where three entries are wrong — an invoice that is
 not in the ledger, a balancing plug with no supporting document, and a wire
 transfer outside the authorised task. Eleven ordinary entries pass. It runs on

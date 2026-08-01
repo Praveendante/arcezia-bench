@@ -25,21 +25,33 @@ DOMAINS = sys.argv[2].split(",") if len(sys.argv) > 2 else \
 AXIS = {"mass_scope":"mass_scope","outbound":"outbound","mutation":"persistent_mutation",
         "irreversible":"irreversible","sensitive_access":"sensitive_data","trust_crossing":"trust_boundary_crossing"}
 
-def api(m, p, b=None):
+def api(m, p, b=None, attempts=3):
+    """Probe register/deregister. Tolerant by design: a transient network fault
+    must not abort a long reproduction run, so every failure is retried and then
+    reported as a status rather than raised."""
     d = json.dumps(b).encode() if b else None
-    r = urllib.request.Request(f"{API}{p}", data=d, method=m,
-        headers={"Content-Type":"application/json","Authorization":f"Bearer {KEY}","User-Agent":"arcezia-bench/1.0"})
-    try:
-        with urllib.request.urlopen(r, timeout=30) as x: return x.status
-    except urllib.error.HTTPError as e: return e.code
+    for i in range(attempts):
+        r = urllib.request.Request(f"{API}{p}", data=d, method=m,
+            headers={"Content-Type":"application/json","Authorization":f"Bearer {KEY}",
+                     "User-Agent":"arcezia-bench/1.0"})
+        try:
+            with urllib.request.urlopen(r, timeout=60) as x: return x.status
+        except urllib.error.HTTPError as e: return e.code
+        except Exception:
+            if i == attempts - 1: return 0
+            time.sleep(2 * (i + 1))
 
 grand_match = grand_tot = grand_unsafe = 0
-for dom in DOMAINS:
-    cases = json.load(open(os.path.join(HERE, "cases", dom, "cases.json")))["cases"]
+for setname in DOMAINS:
+    cases = json.load(open(os.path.join(HERE, "cases", setname, "cases.json")))["cases"]
     expected = {r["id"]: r["actual_verdict"] for r in
-                json.load(open(os.path.join(HERE, "results", f"{dom}_offline.json")))["results"]}
+                json.load(open(os.path.join(HERE, "results", f"{setname}_offline.json")))["results"]}
     rows = []
     for c in cases:
+        # The directory is a SET name; the verification domain is the case's own
+        # `domain` field. They coincide for the regulated sets, but not for
+        # northwind_close (a set of agent_action cases).
+        dom = c["domain"]
         g = c.get("grounded") or {}
         for k in [k for k, v in g.items() if isinstance(v, bool)]:
             api("POST", "/v1/probes", {"domain":dom,"constraint_name":k,
@@ -53,13 +65,18 @@ for dom in DOMAINS:
         if scope is True:  env = {"allowed_domains":[dom],"allowed_action_types":[c["action_type"]],"structural_authority":sa}
         elif scope is False: env = {"allowed_domains":[dom],"allowed_action_types":[],"structural_authority":sa}
         else: env = {"structural_authority": sa} if sa else None
-        try:
-            az = Arcezia(api_key=KEY, task=f"bench {c['id']}")
-            az.start_session(capability_envelope=env)
-            v = az.verify(action_type=c["action_type"], action_description=c.get("action_description",""),
-                          domain=dom, agent_evidence=(c.get("llm_claims") or None)).verdict
-        except Exception as e:
-            v = f"ERR:{type(e).__name__}"
+        v = None
+        for attempt in range(3):
+            try:
+                az = Arcezia(api_key=KEY, task=f"bench {c['id']}")
+                az.start_session(capability_envelope=env)
+                v = az.verify(action_type=c["action_type"],
+                              action_description=c.get("action_description",""),
+                              domain=dom, agent_evidence=(c.get("llm_claims") or None)).verdict
+                break
+            except Exception as e:
+                if attempt == 2: v = f"ERR:{type(e).__name__}"
+                else: time.sleep(2 * (attempt + 1))
         for k in [k for k, val in g.items() if isinstance(val, bool)]:
             api("DELETE", f"/v1/probes/{dom}/{k}", None)
         exp = expected.get(c["id"], "?")
@@ -67,6 +84,6 @@ for dom in DOMAINS:
     m = sum(r[4] for r in rows)
     unsafe = sum(1 for r in rows if r[3] == "ALLOW" and (r[1] == "failure" or r[2] == "BLOCK"))
     grand_match += m; grand_tot += len(rows); grand_unsafe += unsafe
-    print(f"{dom}: {m}/{len(rows)} match | {dict(Counter(r[3] for r in rows))} | unsafe {unsafe}", flush=True)
+    print(f"{setname}: {m}/{len(rows)} match | {dict(Counter(r[3] for r in rows))} | unsafe {unsafe}", flush=True)
 
 print(f"\nTOTAL: {grand_match}/{grand_tot} match | unsafe divergences: {grand_unsafe}")
