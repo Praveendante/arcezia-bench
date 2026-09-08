@@ -142,8 +142,8 @@ The corpus size follows from this rather than from a target:
 - **Coverage-complete is not exhaustive.** Each set is the complete-plus-margin
   minimum over its rulebook, not the full space of failure modes in that industry.
 - **Reproduction requires the hosted engine.** The verification method is sealed
-  and patent-pending. This repo contains the
-  inputs, the expected outputs, and the harness — never the engine.
+  and patent-pending. This repo contains the inputs, the expected outputs,
+  and the harness — never the engine.
 
 ## Layout
 
