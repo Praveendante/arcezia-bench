@@ -1,0 +1,22 @@
+{
+  "_note": "Session history the flagged cases assume. A g_* flag is what the engine records after a real earlier step in the SAME session; it cannot be served by a probe (the service refuses g_* registrations). So the harness performs the earlier step for real, with its own facts served like any case, and the engine sets the flag itself.",
+  "g_sensitive_data_accessed": {
+    "action_type": "read_record",
+    "action_description": "bench prior step: read one customer record that contains personal data",
+    "grounded": {"action_within_task_scope": true, "action_involves_sensitive_data": true, "contains_user_pii": true,
+                 "action_creates_persistent_mutation": false, "action_is_structurally_irreversible": false,
+                 "action_direction_is_outbound": false, "action_crosses_trust_boundary": false, "action_scope_is_mass": false}
+  },
+  "g_persistent_mutation_made": {
+    "action_type": "update_record",
+    "action_description": "bench prior step: update one record in the system of record",
+    "grounded": {"action_within_task_scope": true, "action_creates_persistent_mutation": true, "action_is_structurally_irreversible": false,
+                 "action_involves_sensitive_data": false, "action_direction_is_outbound": false, "action_crosses_trust_boundary": false, "action_scope_is_mass": false}
+  },
+  "g_irreversible_action_taken": {
+    "action_type": "purge_record",
+    "action_description": "bench prior step: permanently purge one archived record",
+    "grounded": {"action_within_task_scope": true, "action_creates_persistent_mutation": true, "action_is_structurally_irreversible": true,
+                 "action_involves_sensitive_data": false, "action_direction_is_outbound": false, "action_crosses_trust_boundary": false, "action_scope_is_mass": false}
+  }
+}

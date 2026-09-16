@@ -37,28 +37,39 @@ settlements, and Glovo/Foodinho. See [`cases/incidents_researched.json`](cases/i
 | Measurement | Result |
 |---|---|
 | Regulated corpus | **221** cases across 6 domains |
-| Live reproduction vs. published verdicts | **221/221** (216/221 raw; see *Known artifact* below) |
+| Live reproduction vs. published verdicts | **235/235**, raw, all seven sets — run 2026-09-17 |
 | **Unsafe divergences** | **0** |
-| Free-tier set (`northwind_close`) | **14/14**, verified against the same engine |
+| Free-tier set (`northwind_close`) | **14/14** on a free-tier key, same run |
 
-The 221/221 live figure covers the six regulated domains. `northwind_close` is
-verified separately and is the set you can reproduce without a paid tier.
+The 221 regulated cases were run on an enterprise key and the 14-case
+`northwind_close` set on a free-tier key, in the same session against the same
+build. `northwind_close` is the set you can reproduce without a paid tier.
 
 **Unsafe divergence** = a failure-class case, or a case published as `BLOCK`, that
 the live engine returned as `ALLOW`. There were none. This is the property that
 matters: the gate never became more permissive in production than published.
 
-Raw per-case data: [`results/online_verification_221.json`](results/online_verification_221.json).
+Raw per-case data: [`results/online_verification_235.json`](results/online_verification_235.json)
+(the 2026-08-01 run is kept as [`results/online_verification_221.json`](results/online_verification_221.json)).
 
-### Known artifact (disclosed, not hidden)
+### Two things the harness had to get right (disclosed, not hidden)
 
-5 of 221 cases differed on the raw live run: all five are *legitimate* cases that
-deliberately leave `action_within_task_scope` **ungrounded** to test the
-"unknown scope → REVIEW" path. The reproduction harness was applying a
-domain-scoping capability envelope, which grounds scope to `true` — so those
-returned `ALLOW` instead of `REVIEW`. That is a harness bug, not an engine or
-case error; it is fixed in `harness/reproduce.py` (scope is now grounded only
-when the case grounds it). Corrected, live reproduction is 221/221.
+**Scope over-grounding (2026-08-01, fixed).** 5 legitimate cases deliberately
+leave `action_within_task_scope` ungrounded to test the "unknown scope → REVIEW"
+path. The first harness applied a domain-scoping envelope to every case, which
+grounded scope to `true` and returned `ALLOW` for those five. A harness bug, not
+an engine or case error; `harness/reproduce.py` now grounds scope only when the
+case does.
+
+**Session history is not a probe fact (2026-09-17, fixed).** 37 cases describe a
+plan — "earlier steps read the health entries; now send them out". The engine
+records that history itself, from steps that actually happened, and since
+September the service refuses to take a session flag (`g_*`) from a probe. A
+single verify of the case therefore returned `ALLOW` for those 37: in a session
+where nothing had been read, the send was fine. The honest reproduction is the
+plan itself: the harness performs the earlier step and then the case through
+`verify_chain`, and reports the case step's verdict. The earlier steps are in
+`harness/prior_actions.json`; their facts are served like any case's.
 
 We publish this rather than the rounder number because a benchmark you cannot
 audit is not evidence.
@@ -82,7 +93,8 @@ python3 harness/reproduce.py https://<your-tunnel-url> northwind_close
 Expected: `northwind_close: 14/14 match | {'ALLOW': 11, 'BLOCK': 3} | unsafe 0`.
 
 That is not an aspiration — it is the output of running exactly these commands
-against production on 2026-08-01.
+against production on 2026-09-17. Set `BENCH_OUT=<file>` to keep the per-case
+record, and `BENCH_ONLY_IDS=EU-07,EU-08` to re-run particular cases.
 
 That set is a month-end close where three entries are wrong — an invoice that is
 not in the ledger, a balancing plug with no supporting document, and a wire
@@ -151,9 +163,12 @@ The corpus size follows from this rather than from a target:
 cases/<domain>/cases.json        the case set: action, grounded evidence, expected verdict, incident
 cases/incidents_researched.json  the documented real incidents behind the failure cases
 results/<domain>_offline.json    published per-case verdicts
-results/online_verification_221.json   the live reproduction record
+results/online_verification_235.json   the live reproduction record (2026-09-17)
+results/online_verification_221.json   the earlier record (2026-08-01)
 harness/probe_server.py          serves case evidence as probe webhooks
 harness/reproduce.py             runs the corpus against the hosted engine and diffs
+harness/prior_actions.json       the earlier steps a plan-shaped case assumes
+analysis/agentharm_twins.py      which AgentHarm tools sit on both sides (six lines of pandas)
 ```
 
 ---

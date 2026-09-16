@@ -17,6 +17,12 @@ CASES: dict[str, dict] = {}
 for f in glob.glob(os.path.join(HERE, "cases", "*", "cases.json")):
     for c in json.load(open(f)).get("cases", []):
         CASES[c.get("action_description", "")] = dict(c.get("grounded", {}) or {})
+# The prior steps the flagged cases assume (see prior_actions.json): served the same way.
+_PRIORS = os.path.join(HERE, "harness", "prior_actions.json")
+if os.path.exists(_PRIORS):
+    for k, pa in json.load(open(_PRIORS)).items():
+        if isinstance(pa, dict) and "action_description" in pa:
+            CASES[pa["action_description"]] = dict(pa.get("grounded", {}) or {})
 
 app = FastAPI()
 
